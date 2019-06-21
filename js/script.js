@@ -4,7 +4,8 @@ const tweetUrl = 'https://twitter.com/intent/tweet?text=';
 const corsFix = 'https://cors-anywhere.herokuapp.com/';
 
 function generateQuote() {
-  document.querySelector('#result-quote').innerHTML = 'Loading...';
+  document.querySelector('#result-quote').innerHTML =
+    '<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>';
   document.querySelector('#result-author').innerHTML = '';
   fetch(`${corsFix}${quoteUrl}`, { cache: 'no-store' })
     .then(res => res.json())
@@ -31,8 +32,10 @@ function generateTweet(input) {
   if (tweetContent.length > 140) {
     generateQuote();
   } else {
-    document.querySelector('#result-quote').innerHTML = rawText.innerText;
-    document.querySelector('#result-author').innerHTML = quoteAuthor;
+    document.querySelector('#result-quote').innerHTML = `"${
+      rawText.innerText
+    }"`;
+    document.querySelector('#result-author').innerHTML = `by ${quoteAuthor}`;
     document
       .querySelector('#tweet')
       .setAttribute('href', `${tweetUrl}${tweetContent}`);

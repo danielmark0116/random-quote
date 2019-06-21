@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Aguafina+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
     <title>Random Quote</title>
 </head>
 <body>
-    <button id="generate-quote">Click</button>
-    <a href="#" id="tweet" target="_blank">tweet</a>
-    <h2 id="result-quote"></h2>
-    <p id="result-author"></p>
+    <div class="container">
+        <h1 class="title is-1 italic-paragraph">
+            Random Quote Generator
+        </h1>
+        <div class="columns is-mobile margins">
+            <div class="column">
+                
+                <article class="message">
+                    <div class="message-body">
+                        <h2 id="result-quote" class="title is-2 italic-paragraph"></h2>
+                    </div>
+                </article>
+                <h4 class="subtitle is-4 author-paragraph" id="result-author"></h4>
+                
+            </div>
+        </div>
+    <div class="columns is-desktop">
+            <div class="column margins">
+                <button id="generate-quote" class="button is-medium is-fullwidth">Random quote</button>
+            </div>
+            <div class="column margins">
+                <a href="#" id="tweet" target="_blank" class="button is-medium is-fullwidth is-info is-outlined">Tweet the quote</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
 
     
-    
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/js/foundation.min.js" integrity="sha256-/PFxCnsMh+nTuM0k3VJCRch1gwnCfKjaP8rJNq5SoBg= sha384-9ksAFjQjZnpqt6VtpjMjlp2S0qrGbcwF/rvrLUg2vciMhwc1UJJeAAOLuJ96w+Nj sha512-UMSn6RHqqJeJcIfV1eS2tPKCjzaHkU/KqgAnQ7Nzn0mLicFxaVhm9vq7zG5+0LALt15j1ljlg8Fp9PT1VGNmDw==" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
